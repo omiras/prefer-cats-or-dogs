@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats or Dogs</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+
+</head>
+
+<body>
+    <main class="container" id="app">
+
+        <label for="euros">
+            Prefiero:
+            <select v-model="favoriteAnimal">
+                <option value="">Seleccionar</option>
+                <option value="gatos">Gatos</option>
+                <option value="perros">Perros</option>
+            </select>
+        </label>
+
+        <h3>Me gustan más los </h3>
+
+        <section class="container">
+            <h3>Selecciona un tipo de animal y te mostraremos una imagen :) </h3>
+        </section>
+        <section class="container">
+            <h3>¡Gatos!</h3>
+            <img src="https://cdn2.thecatapi.com/images/MjA4MzQ4NQ.jpg" alt="">
+        </section>
+        <section class="container">
+            <h3>¡Perros!</h3>
+            <img src="https://cdn2.thedogapi.com/images/AwKd_0wL4.jpg" alt="">
+        </section>
+
+    </main>
+    <script type="module" src="app.js"></script>
+
+</body>
+
+</html>
