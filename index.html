@@ -21,18 +21,23 @@
             </select>
         </label>
 
-        <h3>Me gustan más los </h3>
+        <h3>Me gustan más los {{ isFavoriteCat ? 'Gatos': 'Perros' }}</h3>
 
-        <section class="container">
-            <h3>Selecciona un tipo de animal y te mostraremos una imagen 😄 </h3>
-        </section>
-        <section class="container">
+        <!-- Renderizado condicional para la sección de gatos -->
+        <section v-if="isFavoriteCat" class="container">
             <h3>¡Gatos!</h3>
             <img src="https://cdn2.thecatapi.com/images/MjA4MzQ4NQ.jpg" alt="">
         </section>
-        <section class="container">
+
+        <!-- Renderizado condicional para la sección de perros -->
+        <section v-else-if="isFavoriteDog" class="container">
             <h3>¡Perros!</h3>
             <img src="https://cdn2.thedogapi.com/images/AwKd_0wL4.jpg" alt="">
+        </section>
+
+        <!-- Renderizado condicional para la sección por defecto -->
+        <section v-else class="container">
+            <h3>Selecciona un tipo de animal y te mostraremos una imagen 😄 </h3>
         </section>
 
     </main>
