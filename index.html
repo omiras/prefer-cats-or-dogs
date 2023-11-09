@@ -21,7 +21,7 @@
             </select>
         </label>
 
-        <h3>Me gustan más los {{ isFavoriteCat ? 'Gatos': 'Perros' }}</h3>
+        <h3 v-show="favoriteAnimal">Me gustan más los {{ isFavoriteCat ? 'Gatos': 'Perros' }}</h3>
 
         <!-- Renderizado condicional para la sección de gatos -->
         <section v-if="isFavoriteCat" class="container">
